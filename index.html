@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Submission</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>SRS (Single Repository of Subjects)</h1>
+
+  <div id="upload-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-button" class="close">&times;</span>
+      <h2>Upload Document</h2>
+      <form id="document-upload-form" action="{% url 'upload_document' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="subject-name">Subject Name:</label>
+          <input type="text" id="subject-name" name="subjectName" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="document-file">Upload Document:</label>
+          <input type="file" id="document-file" name="documentFile" accept=".pdf,.doc,.docx">
+        </div>
+        <div class="form-group">
+          <label for="link">Link:</label>
+          <input type="text" id="link" name="link">
+        </div>
+        <div class="form-buttons">
+          <button type="button" id="cancel-button" class="cancel-btn">Cancel</button>
+          <button type="submit" id="save-button" class="save-btn">Save</button>
+        </div>
+      </form>
+      <div id="message-container"></div>
+    </div>
+
+  </div>
+
+  <div id="upload-button-container">
+    <h2 id="upload-heading"></h2>
+    <button id="upload-button" class="upload-btn">Upload Document</button>
+  </div>
+
+  <h2 class="uploaded">Uploaded Documents</h2>
+  <div id="document-list"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

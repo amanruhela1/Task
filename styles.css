@@ -1,0 +1,167 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f1f5f8;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  background-color: #ff6b6b;
+}
+
+h2.uploaded {
+  background-color: #0088cc;
+}
+
+#upload-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.upload-btn {
+  padding: 10px 16px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 20;
+  transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #ff3d3d;
+}
+
+.upload-btn:hover {
+  background-color: #ff3d3d;
+}
+
+/* Rest of your existing CSS code */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="file"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+}
+
+.form-group input[type="file"]:hover {
+  background-color: #f2f2f2;
+}
+
+.form-group button[type="submit"],
+.form-buttons button {
+  padding: 10px 16px;
+  background-color: #ff7675;
+  color: #690606;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button[type="submit"]:hover,
+.form-buttons button:hover {
+  background-color: #d35454;
+}
+
+#document-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.document-item {
+  margin-bottom: 10px;
+  animation: slideIn 0.5s ease;
+}
+
+.document-item a {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #f9ca24;
+  color: #333;
+  text-decoration: none;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #f8f8f8;
+  margin: 10% auto 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+}
